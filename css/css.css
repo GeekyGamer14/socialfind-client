@@ -1,0 +1,27 @@
+body{
+	color: green;
+	font-family: 'Consolas', sans-serif;
+	font-size: 19px;
+	cursor: text;
+}
+*::selection{
+	background: DarkGreen !important;
+}
+#query{
+	border: none;
+	background-color: black;
+	color: green;
+	font-family: 'Consolas', sans-serif;
+	font-size: 19px;
+	outline: none;
+	width: 80%;
+}
+a{
+	color: green;
+}
+#username, #password{
+	border: 1px solid green;
+	background: black;
+	color: green;
+	outline: none;
+}
