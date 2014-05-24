@@ -8,7 +8,8 @@ function query(q){
 	$.ajax({
 		type: 'get',
 		url: 'http://api.iquestria.net/socialfind/query.php?q=' + q,
-		success: function(data){
+		done: function(data){
+			console.log(data);
 			if(data.error){
 				console.error(data.error);
 				$('#results').append('<p>Server error: '+data.error+'</p>');
