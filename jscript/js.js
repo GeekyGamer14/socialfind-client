@@ -11,7 +11,7 @@ function query(q){
 		success: function(data){
 			if(data.error){
 				console.error(data.error);
-				$('#results').append('<p>Error querying server</p>');
+				$('#results').append('<p>Server error: '+data.error+'</p>');
 			}else{
 				$('#results').append('<p>' + data.result + '</p>');
 				el.scrollIntoView(true);
