@@ -8,7 +8,7 @@ function query(q){
 	$.ajax({
 		type: 'get',
 		url: 'http://api.iquestria.net/socialfind/query.php?q=' + q,
-		done: function(data){
+		success: function(data){
 			console.log(data);
 			if(data.error){
 				console.error(data.error);
@@ -17,6 +17,9 @@ function query(q){
 				$('#results').append('<p>' + data.result + '</p>');
 				el.scrollIntoView(true);
 			}
+		},
+		error: function(d){
+			console.error(d);		
 		}
 	});
 }
